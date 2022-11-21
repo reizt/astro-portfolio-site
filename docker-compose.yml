@@ -1,0 +1,12 @@
+name: homepage
+services:
+  next:
+    image: node:19-alpine
+    command: yarn dev -p 4200
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - 4200:4200
+    environment:
+      TZ: Asia/Tokyo
