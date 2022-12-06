@@ -1,9 +1,0 @@
-name: homepage-static
-services:
-  server:
-    image: nginx:stable
-    working_dir: /app
-    volumes:
-      - ./out:/usr/share/nginx/html
-    ports:
-      - 5500:80
