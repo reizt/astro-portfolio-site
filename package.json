@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 6019",
-    "build": "yarn build:css && next build && next export",
-    "build:css": "NODE_ENV=production tailwindcss -o out/tailwind.css -m",
+    "build": "next build && next export",
     "start": "next start",
     "static": "serve out",
     "lint": "run-s lint:prettier lint:eslint lint:tsc",

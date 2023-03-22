@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import type { FC } from 'react';
 
 type Props = {};
@@ -21,7 +20,7 @@ export const TopSection: FC<Props> = () => {
       </div>
       <div className="flex w-160 items-center pt-120 xl:w-2/5 xl:pt-100 2xl:w-2/5 2xl:pt-100">
         <div className="relative w-full overflow-hidden rounded-32 brightness-90">
-          <Image src="/profile.jpg" width={750} height={750} alt="Profile" className="w-full" />
+          <img src="/profile.jpg" width={750} height={750} alt="Profile" className="w-full" />
         </div>
       </div>
     </section>

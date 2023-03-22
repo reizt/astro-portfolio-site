@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import type { FC } from 'react';
 
 type Props = {
@@ -19,7 +18,7 @@ export const LanguageCard: FC<Props> = ({ size, name, iconUrl, iconSizeAdjust = 
       }`}
     >
       <div className="mb-8 flex h-100 w-1/2 grow items-center justify-center">
-        <Image src={iconUrl} alt={name} width={100} height={100} className="w-full" style={{ transform: `scale(${iconSizeAdjust})` }} />
+        <img src={iconUrl} alt={name} width={100} height={100} className="w-full" style={{ transform: `scale(${iconSizeAdjust})` }} />
       </div>
       <h4
         className={`shrink-0 text-white-900 duration-hover group-hover:text-white ${
