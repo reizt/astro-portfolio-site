@@ -1,3 +1,4 @@
+import { HistoryItem } from '#/components/HistoryItem';
 import { LanguageCard } from '#/components/LanguageCard';
 import type { NextPage } from 'next';
 import Image from 'next/image';
@@ -16,13 +17,16 @@ const Home: NextPage = () => {
             <a href="#top" className="text-20 tracking-widest text-white duration-hover hover:text-blue">
               Top
             </a>
+            <a href="#career" className="text-20 tracking-widest text-white duration-hover hover:text-blue">
+              Career
+            </a>
             <a href="#skills" className="text-20 tracking-widest text-white duration-hover hover:text-blue">
               Skills
             </a>
           </nav>
         </div>
       </header>
-      <section id="top" className="mx-auto flex h-full-screen-y w-full max-w-1000 justify-between">
+      <section id="top" className="mx-auto flex h-[calc(100vh-16rem)] w-full max-w-1000 justify-between">
         <div className="w-3/5 pt-300">
           <small className="text-20 font-normal tracking-widest">{"Hello! I'm"}</small>
           <h1 className="mb-12 text-48 font-bold leading-tight tracking-widest">{'Reiju Takahshi'}</h1>
@@ -33,12 +37,38 @@ const Home: NextPage = () => {
             {' CTO. Developing backend, frontend and infrastructure.'}
           </p>
         </div>
-        <div className="flex w-2/5 items-center">
+        <div className="flex w-2/5 items-center pt-100">
           <div className="relative w-full overflow-hidden rounded-32 brightness-90">
             <Image src="/profile.jpg" width={750} height={750} alt="Profile" className="w-full" />
           </div>
         </div>
       </section>
+      <div id="career" className="mx-auto mb-100 flex min-h-full-screen-y w-full max-w-1000 flex-col pt-160 pb-60">
+        <h2 className="mb-20 text-48 font-bold leading-tight tracking-widest">{'Career'}</h2>
+        <div className="relative grow pt-48">
+          <div className="absolute inset-y-0 left-0 h-full w-4 rounded-2 bg-black-700"></div>
+          <div style={{ height: '300px' }}>
+            <HistoryItem month={new Date(2021, 5)}>
+              Joined <span className="text-blue">Creators Team</span> as an outsourced member
+            </HistoryItem>
+          </div>
+          <div style={{ height: '75px' }}>
+            <HistoryItem month={new Date(2022, 5)}>
+              Stopped to use Ruby on Rails and started to learn <span className="text-blue">TypeScript</span> and React
+            </HistoryItem>
+          </div>
+          <div style={{ height: '150px' }}>
+            <HistoryItem month={new Date(2022, 8)}>
+              Appointed as <span className="text-blue">CTO</span> in Creators Team
+            </HistoryItem>
+          </div>
+          <div style={{ height: '150px' }}>
+            <HistoryItem month={new Date(2023, 2)} emphasize>
+              Developing <span className="text-blue">Werp</span>...
+            </HistoryItem>
+          </div>
+        </div>
+      </div>
       <section id="skills" className="mx-auto flex h-full-screen-y w-full max-w-1000 justify-between pb-60">
         <div className="shrink-0 pr-24">
           <div className="mb-12 grid h-max grid-cols-3 gap-12">

@@ -7,12 +7,13 @@ const keysToMap = (keys, keyToValue) => {
 };
 
 const pixels = new Set([
-  0, 4, 8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 100, 120, 140, 160, 164, 180, 300, 1000,
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 100, 120, 140, 160,
+  164, 180, 200, 300, 600, 1000,
 ]);
 
 const remsMap = keysToMap(pixels, (px) => `${px / 10}rem`);
 
-const fullScreenClasses = {
+const screenClassNames = {
   'full-screen-x': '100vw',
   'full-screen-y': '100vh',
   'half-screen-x': '50vw',
@@ -25,7 +26,7 @@ module.exports = {
   theme: {
     spacing: {
       ...remsMap,
-      ...fullScreenClasses,
+      ...screenClassNames,
       auto: 'auto',
       initial: 'initial',
     },
@@ -58,13 +59,19 @@ module.exports = {
         300: '#63bae2',
       },
     },
+    fontFamily: {
+      mono: 'monospace, sans-serif',
+    },
     extend: {
-      maxWidth: { ...remsMap, ...fullScreenClasses },
-      maxHeight: { ...remsMap, ...fullScreenClasses },
-      minWidth: { ...remsMap, ...fullScreenClasses },
-      minHeight: { ...remsMap, ...fullScreenClasses },
+      maxWidth: { ...remsMap, ...screenClassNames },
+      maxHeight: { ...remsMap, ...screenClassNames },
+      minWidth: { ...remsMap, ...screenClassNames },
+      minHeight: { ...remsMap, ...screenClassNames },
       transitionDuration: {
         hover: '300ms',
+      },
+      boxShadow: {
+        dot: '0 0 2rem var(--tw-shadow)',
       },
     },
   },
