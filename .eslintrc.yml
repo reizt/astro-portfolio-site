@@ -6,15 +6,40 @@ env:
   node: true
 ignorePatterns:
   - /*.js
+  - /jest.config.ts
+plugins:
+  - tailwindcss
+  - react
+  - jsx-a11y
+  - jest
 extends:
   - eslint:recommended
   - next/core-web-vitals
   - standard-with-typescript
   - eslint-config-prettier
+  - plugin:tailwindcss/recommended
+  - plugin:react/recommended
+  - plugin:jsx-a11y/recommended
+  - plugin:jest/recommended
 parser: '@typescript-eslint/parser'
 parserOptions:
   project: './tsconfig.json'
 rules:
+  semi: off
+  react/display-name: off
+  prefer-arrow-callback: error
+  '@typescript-eslint/explicit-function-return-type': off
+  '@typescript-eslint/consistent-type-definitions': off
+  '@typescript-eslint/no-misused-promises': off
+  '@typescript-eslint/no-non-null-assertion': off
+  '@typescript-eslint/array-type':
+    - error
+    - default: array
+      readonly: array
+  '@typescript-eslint/no-unused-vars':
+    - error
+    - varsIgnorePattern: '__.*'
+      args: none
   '@typescript-eslint/no-unnecessary-condition': error
   '@typescript-eslint/restrict-template-expressions':
     - error
@@ -23,27 +48,17 @@ rules:
       allowAny: true
       allowNullish: false
       allowRegExp: true
-
-  semi: off
-  comma-dangle: off
-  space-before-function-paren: off
-  no-case-declarations: off
-  indent: off
-  multiline-ternary: off
-  react/display-name: off
-  '@typescript-eslint/space-before-function-paren': off
-  '@typescript-eslint/explicit-function-return-type': off
-  '@typescript-eslint/semi': off
-  '@typescript-eslint/member-delimiter-style': off
-  '@typescript-eslint/consistent-type-definitions': off
-  '@typescript-eslint/array-type': off
-  '@typescript-eslint/prefer-optional-chain': off
-  '@typescript-eslint/no-floating-promises': off
-  '@typescript-eslint/indent': off
-  '@typescript-eslint/no-misused-promises': off
-  '@typescript-eslint/no-non-null-assertion': off
-  '@typescript-eslint/no-unused-vars':
+  '@typescript-eslint/consistent-type-assertions': off
+  jsx-a11y/anchor-is-valid:
+    - off
+  tailwindcss/no-custom-classname:
     - error
-    - varsIgnorePattern: '_.*'
-      args: none
+    - whitelist:
+        - light
+        - uil
+        - uil-.*
+  tailwindcss/enforces-negative-arbitrary-values: off
   '@next/next/no-img-element': off
+  jest/valid-title: off
+  '@typescript-eslint/prefer-ts-expect-error': off
+  react/react-in-jsx-scope: off
