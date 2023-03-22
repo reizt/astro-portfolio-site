@@ -60,7 +60,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      mono: 'monospace, sans-serif',
+      mono: ['monospace', 'sans-serif'],
     },
     extend: {
       maxWidth: { ...remsMap, ...screenClassNames },
