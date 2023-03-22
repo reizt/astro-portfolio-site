@@ -11,7 +11,7 @@ type Props = {
 
 export const HistoryItem: FC<Props> = ({ month, children, className = '', emphasize = false, ...restProps }) => {
   return (
-    <div className={`relative flex items-center pl-32 ${className}`} {...restProps}>
+    <div className={`relative flex flex-col pl-32 xl:flex-row xl:items-center 2xl:flex-row 2xl:items-center ${className}`} {...restProps}>
       <i
         className={`absolute top-1/2 block -translate-y-1/2 rounded-full bg-blue shadow-dot shadow-blue ${
           emphasize ? '-left-10 h-24 w-24' : '-left-6 h-16 w-16'
