@@ -7,7 +7,7 @@ export const CareerSection: FC<Props> = () => {
   return (
     <section
       id="career"
-      className="mx-auto mb-0 flex min-h-full-screen-y w-full max-w-1000 flex-col py-60 xl:mb-100 xl:py-120 xl:pt-160 2xl:mb-100 2xl:py-120 2xl:pt-160"
+      className="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col py-60 xl:py-120 xl:pt-160 2xl:py-120 2xl:pt-160"
     >
       <h2 className="mb-20 text-32 font-bold leading-tight tracking-widest xl:text-48 2xl:text-48">{'Career'}</h2>
       <div className="relative grow pt-48">

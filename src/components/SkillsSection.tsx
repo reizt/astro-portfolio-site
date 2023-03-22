@@ -7,7 +7,7 @@ export const SkillsSection: FC<Props> = () => {
   return (
     <section
       id="skills"
-      className="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col-reverse justify-between pb-60 xl:flex-row 2xl:flex-row"
+      className="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col-reverse justify-between pb-60 xl:flex-row xl:pt-100 2xl:flex-row 2xl:pt-100"
     >
       <div className="shrink-0 xl:pr-24 2xl:pr-24">
         <div className="mb-12 grid h-max gap-12 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-3 2xl:grid-cols-3">
