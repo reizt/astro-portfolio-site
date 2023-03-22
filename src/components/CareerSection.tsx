@@ -28,7 +28,7 @@ export const CareerSection: FC<Props> = () => {
           </HistoryItem>
         </div>
         <div style={{ minHeight: '150px' }}>
-          <HistoryItem month={new Date(2023, 2)} emphasize>
+          <HistoryItem month={new Date(2023, 2)}>
             Developing <span className="text-blue">Werp</span>...
           </HistoryItem>
         </div>
