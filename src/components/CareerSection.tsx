@@ -5,11 +5,8 @@ type Props = {};
 
 export const CareerSection: FC<Props> = () => {
   return (
-    <section
-      id="career"
-      className="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col py-60 xl:py-120 xl:pt-160 2xl:py-120 2xl:pt-160"
-    >
-      <h2 className="mb-20 text-32 font-bold leading-tight tracking-widest xl:text-48 2xl:text-48">{'Career'}</h2>
+    <section id="career" className="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col py-60 xl:py-120 xl:pt-160">
+      <h2 className="mb-20 text-32 font-bold leading-tight tracking-widest xl:text-48">{'Career'}</h2>
       <div className="relative grow pt-48">
         <div className="absolute inset-y-0 left-0 h-full w-4 rounded-2 bg-black-700"></div>
         <div style={{ minHeight: '300px' }}>

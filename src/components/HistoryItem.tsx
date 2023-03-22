@@ -10,10 +10,7 @@ type Props = {
 
 export const HistoryItem: FC<Props> = ({ month, children, className = '', ...restProps }) => {
   return (
-    <div
-      className={`group relative flex flex-col pl-32 xl:flex-row xl:items-center 2xl:flex-row 2xl:items-center ${className}`}
-      {...restProps}
-    >
+    <div className={`group relative flex flex-col pl-32 xl:flex-row xl:items-center ${className}`} {...restProps}>
       <i
         className={`absolute top-1/2 -left-6 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-blue shadow-dot shadow-blue duration-150 group-hover:-left-10 group-hover:h-24 group-hover:w-24`}
       >
