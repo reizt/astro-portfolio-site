@@ -44,5 +44,11 @@
   "scss.format.spaceAroundSelectorSeparator": true,
   "scss.format.enable": true,
   "scss.format.braceStyle": "collapse",
-  "scss.completion.completePropertyWithSemicolon": true
+  "scss.completion.completePropertyWithSemicolon": true,
+  "yaml.schemas": {
+    "file:///Users/reizt/dev/.vscode/path.schema.json": ["*.path*.yml"],
+    "file:///Users/reizt/dev/.vscode/prop.schema.json": ["*.prop.yml", "*.model*.yml"],
+    "https://taskfile.dev/schema.json": "file:///Users/reizt/dev/ct/werp/openapi/TaskFile.yml",
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/reizt/dev/my/blog/.github/workflows/deploy.yml"
+  }
 }
