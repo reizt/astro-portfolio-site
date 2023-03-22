@@ -15,7 +15,7 @@ export const TopSection: FC<Props> = () => {
           {' CTO. Developing backend, frontend and infrastructure.'}
         </p>
       </div>
-      <div className="flex w-160 items-center pt-120 xl:w-2/5 xl:pt-100">
+      <div className="flex w-160 items-center pt-120 lg:w-200 xl:w-2/5 xl:pt-100">
         <div className="relative w-full overflow-hidden rounded-32 brightness-90">
           <img src="/profile.jpg" width={750} height={750} alt="Profile" className="w-full" />
         </div>
