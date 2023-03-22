@@ -10,7 +10,7 @@ export const TopSection: FC<Props> = () => {
     >
       <div className="w-full pt-32 xl:w-3/5 xl:pt-300 2xl:w-3/5 2xl:pt-300">
         <small className="text-20 font-normal tracking-widest">{"Hello! I'm"}</small>
-        <h1 className="mb-12 text-32 font-bold leading-tight tracking-widest xl:text-48 2xl:text-48">{'Reiju Takahshi'}</h1>
+        <h1 className="mb-12 text-32 font-bold leading-tight tracking-widest xl:text-48 2xl:text-48">{'Reiju Takahashi'}</h1>
         <p className="text-16 font-light leading-snug tracking-widest text-white-500">
           <a href="https://creators-team.com" className="text-blue hover:text-blue-300">
             Creators Team
