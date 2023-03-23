@@ -21,7 +21,7 @@ export const LanguageCard: FC<Props> = ({ size, name, iconUrl, iconSizeAdjust = 
         <img src={iconUrl} alt={name} width={100} height={100} className="w-full" style={{ transform: `scale(${iconSizeAdjust})` }} />
       </div>
       <h4
-        className={`shrink-0 text-white-900 duration-hover group-hover:text-white ${
+        className={`shrink-0 tracking-wider text-white-900 duration-hover group-hover:text-white ${
           {
             small: 'text-10',
             large: 'text-12',
