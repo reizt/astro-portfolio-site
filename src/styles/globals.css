@@ -16,6 +16,8 @@ html {
 
 body {
   font-size: 1.6rem;
+  color: white;
+  background: #111729;
 }
 
 a {
@@ -25,14 +27,4 @@ a {
 
 li {
   list-style: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: #111729;
-  }
 }
