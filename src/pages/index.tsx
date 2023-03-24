@@ -1,5 +1,6 @@
 import { CareerSection } from '#/components/CareerSection';
 import { Header } from '#/components/Header';
+import { ProductsSection } from '#/components/ProductsSection';
 import { SkillsSection } from '#/components/SkillsSection';
 import { TopSection } from '#/components/TopSection';
 import type { NextPage } from 'next';
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <TopSection />
       <CareerSection />
       <SkillsSection />
+      <ProductsSection />
     </div>
   );
 };

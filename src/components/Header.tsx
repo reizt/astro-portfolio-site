@@ -17,6 +17,9 @@ export const Header: FC<Props> = () => {
           <a href="#skills" className="text-20 tracking-widest text-white duration-hover hover:text-blue">
             Skills
           </a>
+          <a href="#products" className="text-20 tracking-widest text-white duration-hover hover:text-blue">
+            Products
+          </a>
         </nav>
       </div>
     </header>

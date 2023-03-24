@@ -28,3 +28,7 @@ a {
 li {
   list-style: none;
 }
+
+code {
+  font-family: monospace, sans-serif;
+}
