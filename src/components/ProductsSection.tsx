@@ -37,7 +37,7 @@ export const ProductsSection: FC<Props> = () => {
           name="TODO CLI"
           description={
             <>
-              A simple CLI TODO tool written by <span className="text-blue">Go</span>.
+              A simple CLI TODO tool written in <span className="text-blue">Go</span>.
             </>
           }
           iconUrl="/products/todo-cli.svg"
