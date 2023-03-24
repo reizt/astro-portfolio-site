@@ -9,6 +9,21 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
       </Head>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ4DH05XP5"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-XZ4DH05XP5');
+            </script>
+          `,
+        }}
+      ></div>
       <body className="overflow-x-hidden">
         <Main />
         <NextScript />
