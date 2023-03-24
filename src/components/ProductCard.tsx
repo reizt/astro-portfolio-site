@@ -17,7 +17,7 @@ export const ProductCard: FC<Props> = ({ href, name, description, iconUrl, iconS
       className="flex min-h-100 flex-col items-center gap-x-36 gap-y-20 rounded-16 bg-black-500 p-20 duration-hover hover:bg-black-600 md:flex-row"
     >
       <div className="flex h-52 w-52 shrink-0 items-center justify-center md:h-60 md:w-60">
-        <img src={iconUrl} alt="VSCode icon" className="max-w-full" style={{ transform: `scale(${iconSizeAdjust})` }} />
+        <img src={iconUrl} alt="VSCode icon" className="h-full max-w-full" style={{ transform: `scale(${iconSizeAdjust})` }} />
       </div>
       <div className="flex h-full w-full flex-col justify-between gap-y-4 pt-8 md:w-auto md:gap-y-0">
         <h4 className="text-20 font-semibold leading-tight tracking-widest">{name}</h4>
