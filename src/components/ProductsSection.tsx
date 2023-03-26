@@ -17,8 +17,8 @@ export const ProductsSection: FC<Props> = () => {
               <span className="text-blue">Tech Accel</span>.
             </>
           }
-          iconUrl="/products/tech-accel.svg"
-          iconSizeAdjust={0.7}
+          iconUrl="/products/tech-accel.png"
+          iconSizeAdjust={0.8}
         />
         <ProductCard
           href="https://marketplace.visualstudio.com/items?itemName=reizt.vscode-px-to-rem"
