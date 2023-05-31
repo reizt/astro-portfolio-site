@@ -4,7 +4,7 @@ type Props = {};
 
 export const Header: FC<Props> = () => {
   return (
-    <header className="fixed inset-x-0 top-0 z-10 mx-auto flex h-72 w-full-screen-x items-center justify-center py-12 px-16 xl:px-60">
+    <header className="fixed inset-x-0 top-0 z-10 mx-auto flex h-72 w-full-screen-x items-center justify-center px-16 py-12 xl:px-60">
       <div className="flex w-full max-w-1000">
         <div className="grow"></div>
         <nav className="hidden items-center justify-between gap-x-32 sm:flex">

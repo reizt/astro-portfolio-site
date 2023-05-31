@@ -13,8 +13,7 @@ export const ProductsSection: FC<Props> = () => {
           name="Tech Accel"
           description={
             <>
-              A web music app I developed in <span className="text-blue">Cyber Agent</span> program{' '}
-              <span className="text-blue">Tech Accel</span>.
+              A web music app I developed in <span className="text-blue">Cyber Agent</span> program <span className="text-blue">Tech Accel</span>.
             </>
           }
           iconUrl="/products/tech-accel.png"
@@ -25,8 +24,8 @@ export const ProductsSection: FC<Props> = () => {
           name="VSCode px to rem"
           description={
             <>
-              A <span className="text-blue">VSCode extension</span> that converts <code className="font-bold">px</code> in CSS/SCSS files
-              to <code className="font-bold">rem</code>
+              A <span className="text-blue">VSCode extension</span> that converts <code className="font-bold">px</code> in CSS/SCSS files to{' '}
+              <code className="font-bold">rem</code>
             </>
           }
           iconUrl="/products/vscode-px-to-rem.svg"

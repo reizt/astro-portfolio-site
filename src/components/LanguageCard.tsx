@@ -10,7 +10,7 @@ type Props = {
 export const LanguageCard: FC<Props> = ({ size, name, iconUrl, iconSizeAdjust = 1 }) => {
   return (
     <div
-      className={`group flex flex-col items-center justify-between rounded-16 bg-black-500 pt-24 pb-12 duration-hover hover:bg-black-600 ${
+      className={`group flex flex-col items-center justify-between rounded-16 bg-black-500 pb-12 pt-24 duration-hover hover:bg-black-600 ${
         {
           small: 'w-auto xl:w-120 h-auto xl:h-120',
           large: 'w-auto xl:w-164 h-auto xl:h-164',

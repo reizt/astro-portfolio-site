@@ -4,10 +4,7 @@ type Props = {};
 
 export const TopSection: FC<Props> = () => {
   return (
-    <section
-      id="top"
-      className="mx-auto flex w-full max-w-1000 flex-col-reverse justify-between xl:min-h-[calc(100vh-16rem)] xl:flex-row"
-    >
+    <section id="top" className="mx-auto flex w-full max-w-1000 flex-col-reverse justify-between xl:min-h-[calc(100vh-16rem)] xl:flex-row">
       <div className="w-full pt-32 xl:w-3/5 xl:pt-300">
         <small className="text-20 font-normal tracking-widest">{"Hello! I'm"}</small>
         <h1 className="mb-12 text-32 font-bold leading-tight tracking-widest xl:text-48">{'Reiju Takahashi'}</h1>

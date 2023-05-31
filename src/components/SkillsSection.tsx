@@ -5,10 +5,7 @@ type Props = {};
 
 export const SkillsSection: FC<Props> = () => {
   return (
-    <section
-      id="skills"
-      className="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col-reverse justify-between pb-60 xl:flex-row xl:pt-100"
-    >
+    <section id="skills" className="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col-reverse justify-between pb-60 xl:flex-row xl:pt-100">
       <div className="shrink-0 xl:pr-24">
         <div className="mb-12 grid h-max grid-cols-2 gap-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-3">
           <LanguageCard size="large" name="TypeScript" iconUrl="/languages/typescript.svg" iconSizeAdjust={0.6} />
@@ -28,7 +25,7 @@ export const SkillsSection: FC<Props> = () => {
           <LanguageCard size="small" name="WordPress" iconUrl="/languages/wordpress.svg" iconSizeAdjust={0.6} />
         </div>
       </div>
-      <div className="mb-32 grow pt-60 xl:mb-0 xl:pt-100 xl:pl-60">
+      <div className="mb-32 grow pt-60 xl:mb-0 xl:pl-60 xl:pt-100">
         <h2 className="mb-12 text-32 font-bold leading-tight tracking-widest xl:text-48">{'Skills'}</h2>
         <p className="text-16 font-light leading-snug tracking-widest text-white-500">
           {"I'm mainly using "}
