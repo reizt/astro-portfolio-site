@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head" . }}
+  <body class="overflow-x-hidden vsc-initialized" cz-shortcut-listen="true">
+    {{ partial "google-analytics" . }}
+    <div class="px-16 xl:px-60">
+      <section id="top" class="mx-auto flex w-full max-w-1000 flex-col-reverse justify-between xl:min-h-[calc(100vh-16rem)] xl:flex-row">
+        <div class="w-full pt-32 xl:w-3/5 xl:pt-300">
+          <small class="text-20 font-normal tracking-widest">Hello! I'm</small>
+          <h1 class="mb-12 text-32 font-bold leading-tight tracking-widest xl:text-48">Reiju Takahashi</h1>
+          <p class="text-16 font-light leading-snug tracking-widest text-white-500">
+            <a href="https://creators-team.com" class="text-blue hover:text-blue-300">Creators Team</a> CTO. Developing backend, frontend and infrastructure.
+          </p>
+        </div>
+        <div class="flex w-160 items-center pt-60 lg:w-200 xl:w-2/5 xl:pt-100">
+          <div class="relative w-full overflow-hidden rounded-32 brightness-90">
+            <img src="/me.jpg" width="750" height="750" alt="Profile" class="w-full" />
+          </div>
+        </div>
+      </section>
+      <section id="career" class="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col py-60 xl:py-120 xl:pt-160">
+        <h2 class="mb-20 text-32 font-bold leading-tight tracking-widest xl:text-48">Career</h2>
+        <div class="relative grow pt-48">
+          <div class="absolute inset-y-0 left-0 h-full w-4 rounded-2 bg-black-700"></div>
+          {{ range .Site.Data.Careers }} {{ partial "top/career" . }} {{ end }}
+        </div>
+      </section>
+      <section id="skills" class="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col-reverse justify-between pb-60 xl:flex-row xl:pt-100">
+        <div class="shrink-0 xl:pr-24">
+          <div class="mb-12 grid h-max grid-cols-2 gap-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-3">
+            {{ range .Site.Data.PrimaryLanguages }} {{ partial "top/language" . }} {{ end }}
+          </div>
+          <div class="grid h-max grid-cols-2 gap-12 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-4">
+            {{ range .Site.Data.SubLanguages }} {{ partial "top/language" . }} {{ end }}
+          </div>
+        </div>
+        <div class="mb-32 grow pt-60 xl:mb-0 xl:pt-100 xl:pl-60">
+          <h2 class="mb-12 text-32 font-bold leading-tight tracking-widest xl:text-48">Skills</h2>
+          <p class="text-16 font-light leading-snug tracking-widest text-white-500">
+            I'm mainly using <span class="text-blue">TypeScript</span> both in backend and frontend.<br />I love its convenient typing system.<br />
+            <br />
+            <span class="text-blue">AWS</span>
+            is often used for the infrastructure environment, and in that case,<!-- -->
+            <span class="text-blue">terraform</span> and <span class="text-blue">docker</span> are used together.<br />
+            <br />The CSS framework I love best is <span class="text-blue">Tailwind CSS</span>.
+          </p>
+        </div>
+      </section>
+      <section id="products" class="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col py-60 xl:py-120 xl:pt-160">
+        <h2 class="mb-20 text-32 font-bold leading-tight tracking-widest xl:text-48">Products</h2>
+        <div class="mb-12 grid h-max grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-1">
+          {{ range .Site.Data.Products }} {{ partial "top/product" . }} {{ end }}
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

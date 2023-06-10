@@ -1,0 +1,16 @@
+- Name: Sass
+  IconUrl: /languages/sass.svg
+  Scale: 0.6
+  Primary: false
+- Name: Vue.js
+  IconUrl: /languages/vuejs.svg
+  Scale: 0.6
+  Primary: false
+- Name: Ruby on Rails
+  IconUrl: /languages/rails.svg
+  Scale: 0.8
+  Primary: false
+- Name: WordPress
+  IconUrl: /languages/wordpress.svg
+  Scale: 0.6
+  Primary: false

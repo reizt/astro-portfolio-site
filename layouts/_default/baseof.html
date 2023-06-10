@@ -1,0 +1,7 @@
+<html>
+  {{ partial "head" . }}
+  <body class="overflow-x-hidden vsc-initialized" cz-shortcut-listen="true">
+    {{ partial "google-analytics" . }}
+    <div class="px-16 xl:px-60">{{ block "main" . }}{{ end }}</div>
+  </body>
+</html>

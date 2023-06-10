@@ -9,7 +9,8 @@
 }
 
 html {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'avenir next', 'avenir', 'segoe ui', 'helvetica neue', 'helvetica', 'Cantarell', 'Ubuntu',
+    'roboto', 'noto', 'arial', 'sans-serif';
   font-size: 62.5%;
   font-weight: 500;
 }

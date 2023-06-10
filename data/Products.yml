@@ -1,0 +1,20 @@
+- Href: https://tech-accel.vercel.app
+  IconUrl: /products//tech-accel.png
+  Scale: 0.8
+  Name: Tech Accel
+  Description: A web music app I developed in <span class="text-blue">Cyber Agent</span> program <span class="text-blue">Tech Accel</span>.
+- Href: https://marketplace.visualstudio.com/items?itemName=reizt.vscode-px-to-rem
+  IconUrl: /products//vscode-px-to-rem.svg
+  Scale: 0.7
+  Name: VSCode px to rem
+  Description: A <span class="text-blue">VSCode extension</span> that converts <code class="font-bold">px</code> in CSS/SCSS files to <code class="font-bold">rem</code>
+- Href: https://github.com/reizt/todo-cli
+  IconUrl: /products//todo-cli.svg
+  Scale: 0.8
+  Name: TODO CLI
+  Description: A simple CLI TODO tool written in <span class="text-blue">Go</span>.
+- Href: https://github.com/reizt/multipart-parser
+  IconUrl: /products//multipart-parser.svg
+  Scale: 0.75
+  Name: Multipart Parser
+  Description: Implemented a function that just parses <span class="text-blue">multipart/form-data</span> request.

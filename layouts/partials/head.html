@@ -1,0 +1,17 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Reiju Takahashi</title>
+  <meta name="description" content="Reiju Takahashi's portfolio" />
+
+  {{ $options := dict "inlineImports" true }}
+  <style></style>
+  {{ $css := resources.Get "css/style.css"| resources.PostCSS | minify }}
+  <style></style>
+  <link href="{{ $css.RelPermalink }}" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
