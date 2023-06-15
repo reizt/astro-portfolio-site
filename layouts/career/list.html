@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head" . }}
+  <body class="overflow-x-hidden vsc-initialized" cz-shortcut-listen="true">
+    {{ partial "google-analytics" . }}
+    <br />
+    {{ partial "header" }}
+    <div class="px-16 xl:px-60">
+      <section id="career" class="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col py-60 xl:py-120 xl:pt-160">
+        <h2 class="mb-20 text-32 font-bold leading-tight tracking-widest xl:text-48">Career</h2>
+        <div class="relative grow pt-48">
+          <div class="absolute inset-y-0 left-0 h-full w-4 rounded-2 bg-black-700"></div>
+          {{ range .Site.Data.Careers }} {{ partial "top/career" . }} {{ end }}
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

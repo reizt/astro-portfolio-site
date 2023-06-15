@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head" . }}
+  <body class="overflow-x-hidden vsc-initialized" cz-shortcut-listen="true">
+    {{ partial "google-analytics" . }}
+    <br />
+    {{ partial "header" }}
+    <div class="px-16 xl:px-60">
+      <section id="skills" class="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col-reverse justify-between pb-60 xl:flex-row xl:pt-100">
+        <div class="shrink-0 xl:pr-24">
+          <div class="mb-12 grid h-max grid-cols-2 gap-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-3">
+            {{ range .Site.Data.PrimaryLanguages }} {{ partial "top/language" . }} {{ end }}
+          </div>
+          <div class="grid h-max grid-cols-2 gap-12 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-4">
+            {{ range .Site.Data.SubLanguages }} {{ partial "top/language" . }} {{ end }}
+          </div>
+        </div>
+        <div class="mb-32 grow pt-60 xl:mb-0 xl:pt-100 xl:pl-60">
+          <h2 class="mb-12 text-32 font-bold leading-tight tracking-widest xl:text-48">Skills</h2>
+          <p class="text-16 font-light leading-snug tracking-widest text-white-500">
+            I'm mainly using <span class="text-blue">TypeScript</span> both in backend and frontend.<br />I love its convenient typing system.<br />
+            <br />
+            <span class="text-blue">AWS</span>
+            is often used for the infrastructure environment, and in that case,<!-- -->
+            <span class="text-blue">terraform</span> and <span class="text-blue">docker</span> are used together.<br />
+            <br />The CSS framework I love best is <span class="text-blue">Tailwind CSS</span>.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
