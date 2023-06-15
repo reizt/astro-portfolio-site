@@ -1,11 +1,13 @@
 <header class="fixed inset-x-0 top-0 z-10 mx-auto flex h-72 w-full-screen-x items-center justify-center py-12 px-16 xl:px-60">
   <div class="flex w-full max-w-1000">
     <div class="grow"></div>
+    {{ $current := . }}
     <nav class="hidden items-center justify-between gap-x-32 sm:flex">
-      <a href="/" class="text-20 tracking-widest text-white duration-hover hover:text-blue">Top</a>
-      <a href="/career/" class="text-20 tracking-widest text-white duration-hover hover:text-blue">Career</a>
-      <a href="/skills/" class="text-20 tracking-widest text-white duration-hover hover:text-blue">Skills</a>
-      <a href="/products/" class="text-20 tracking-widest text-white duration-hover hover:text-blue">Products</a>
+      {{ range .Site.Data.Menus }} {{ if eq $current.RelPermalink .Url }}
+      <a href="{{ .Url }}" class="text-20 tracking-widest duration-hover text-blue pointer-events-none">{{ .Title }}</a>
+      {{ else }}
+      <a href="{{ .Url }}" class="text-20 tracking-widest duration-hover text-white hover:text-blue">{{ .Title }}</a>
+      {{ end }} {{ end }}
     </nav>
   </div>
 </header>

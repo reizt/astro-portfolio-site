@@ -4,13 +4,22 @@
   <body class="overflow-x-hidden vsc-initialized" cz-shortcut-listen="true">
     {{ partial "google-analytics" . }}
     <br />
-    {{ partial "header" }}
+    {{ partial "header" . }}
     <div class="px-16 xl:px-60">
       <section id="top" class="mx-auto flex w-full max-w-1000 flex-col-reverse justify-between xl:min-h-[calc(100vh-16rem)] xl:flex-row">
         <div class="w-full pt-32 xl:w-3/5 xl:pt-300">
           <small class="text-20 font-normal tracking-widest">Hello! I'm</small>
           <h1 class="mb-12 text-32 font-bold leading-tight tracking-widest xl:text-48">Reiju Takahashi</h1>
-          <p class="text-16 font-light leading-snug tracking-widest text-white-500"><span class="text-blue">Full stack</span> web application developer</p>
+          <p class="text-16 font-light leading-snug tracking-widest text-white-500 mb-12">
+            <span class="text-blue">Full stack</span> web application developer
+          </p>
+          <div class="flex gap-x-10">
+            {{ range .Site.Data.SocialAccounts }}
+            <a href="{{ .Url }}" class="relative block w-48 h-48 rounded-12 p-6 bg-black-500 hover:bg-black-700 duration-150" title="{{ .Label }}">
+              <img src="{{ .IconUrl }}" width="32" height="32" alt="{{ .Label }}" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32" />
+            </a>
+            {{ end }}
+          </div>
         </div>
         <div class="flex w-160 items-center pt-60 lg:w-200 xl:w-2/5 xl:pt-100">
           <div class="relative w-full overflow-hidden rounded-32 brightness-90">
