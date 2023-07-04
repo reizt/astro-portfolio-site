@@ -1,0 +1,24 @@
+---
+export type Language = {
+  name: string;
+  iconUrl: string;
+  scale: number;
+  primary: boolean;
+};
+export interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props as Props;
+---
+
+<div
+  class={`group flex flex-col-reverse items-center justify-between rounded-16 bg-black-500 pt-24 pb-12 duration-hover hover:bg-black-600 w-auto h-auto ${
+    lang.primary ? 'xl:w-164 xl:h-164' : 'xl:w-120 xl:h-120'
+  }`}
+>
+  <h4 class={`shrink-0 tracking-wider text-white-500 duration-hover group-hover:text-white ${lang.primary ? 'text-12' : 'text-10'}`}>{lang.name}</h4>
+  <div class="mb-8 flex h-100 w-1/2 grow items-center justify-center">
+    <img src={lang.iconUrl} alt={lang.name} width="100" height="100" class="w-full" style={`transform: scale(var(--scale)); --scale: ${lang.scale}`} />
+  </div>
+</div>

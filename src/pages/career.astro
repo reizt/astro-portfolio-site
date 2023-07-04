@@ -1,0 +1,56 @@
+---
+import Layout from 'src/layouts/Layout.astro';
+type Career = {
+  title: string;
+  date: Date;
+  minHeightRem: number;
+};
+const carrers: Career[] = [
+  { title: 'Entered <span class="text-blue">Yokohama Suiran High School</span>', date: new Date('2018-04-01T00:00:00-00:00'), minHeightRem: 20 },
+  {
+    title: 'Entered <span class="text-blue">Tokyo University of Science</span>, Department of Information Engineering',
+    date: new Date('2021-04-01T00:00:00-00:00'),
+    minHeightRem: 4,
+  },
+  { title: 'Joined <span class="text-blue">Creators Team</span> as an outsourced member', date: new Date('2021-06-01T00:00:00-00:00'), minHeightRem: 29 },
+  { title: 'Started to learn <span class="text-blue">TypeScript</span> and React', date: new Date('2022-06-01T00:00:00-00:00'), minHeightRem: 6.5 },
+  { title: 'Appointed as <span class="text-blue">CTO</span> in Creators Team', date: new Date('2022-09-01T00:00:00-00:00'), minHeightRem: 9 },
+  {
+    title: 'Joined a internship program <span class="text-blue">Tech Accel</span> of <span class="text-blue">Cyber Agent</span>',
+    date: new Date('2023-01-01T00:00:00-00:00'),
+    minHeightRem: 4,
+  },
+  { title: 'End the internship', date: new Date('2023-03-01T00:00:00-00:00'), minHeightRem: 1.5 },
+  { title: 'Developing <span class="text-blue">Werp</span>...', date: new Date('2023-04-01T00:00:00-00:00'), minHeightRem: 14 },
+];
+
+const formatDate = (date: Date) => {
+  const year = date.getFullYear().toString();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  return `${year}.${month}`;
+};
+---
+
+<Layout currentPath="/career/">
+  <div class="px-16 xl:px-60">
+    <section id="career" class="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col py-60 xl:py-120 xl:pt-160">
+      <h2 class="mb-20 text-32 font-bold leading-tight tracking-widest xl:text-48">Career</h2>
+      <div class="relative grow pt-48">
+        <div class="absolute inset-y-0 left-0 h-full w-4 rounded-2 bg-black-700"></div>
+        {
+          carrers.map((career) => (
+            <div class="mb-20" style={`min-height: calc(var(--min-height) * 1rem); --min-height: ${career.minHeightRem};`}>
+              <div class="group relative flex flex-col pl-32 xl:flex-row xl:items-center">
+                <i class="absolute top-0 -left-6 flex h-16 w-16 items-center justify-center rounded-full bg-blue shadow-dot shadow-blue duration-150 group-hover:-left-10 group-hover:h-24 group-hover:w-24 sm:top-1/2 sm:-translate-y-1/2">
+                  <i class="h-12 w-12 rounded-full border-2 border-black bg-blue duration-150 group-hover:h-20 group-hover:w-20"> </i>
+                </i>
+                <span class="mr-20 font-mono text-16 font-bold tracking-widest text-white duration-150">{formatDate(career.date)}</span>
+                <p class="text-16 font-light tracking-wider text-white-500 group-hover:scale-105 pl-28 duration-150" set:html={career.title} />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</Layout>

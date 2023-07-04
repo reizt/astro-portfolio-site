@@ -1,0 +1,33 @@
+---
+type Menu = {
+  title: string;
+  url: string;
+};
+export interface Props {
+  currentPath: string;
+}
+const menus: Menu[] = [
+  { title: 'Top', url: '/' },
+  { title: 'Career', url: '/career/' },
+  { title: 'Skills', url: '/skills/' },
+  { title: 'Products', url: '/products/' },
+];
+const isCurrent = (url: string) => {
+  return Astro.props.currentPath === url;
+};
+---
+
+<header class="fixed inset-x-0 top-0 z-10 mx-auto flex h-72 w-full-screen-x items-center justify-center py-12 px-16 xl:px-60">
+  <div class="flex w-full max-w-1000">
+    <div class="grow"></div>
+    <nav class="hidden items-center justify-between gap-x-32 sm:flex">
+      {
+        menus.map((menu) => (
+          <a href={menu.url} class={`text-20 tracking-widest duration-hover ${isCurrent(menu.url) ? 'text-blue pointer-events-none' : 'hover:text-blue'}`}>
+            {menu.title}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

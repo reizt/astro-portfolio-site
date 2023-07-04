@@ -22,7 +22,7 @@ const screenClassNames = {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./layouts/**/*.html', './content/**/*.md', './content/**/*.html', './static/**/*.css'],
+  content: ['./src/**/*.astro'],
   theme: {
     spacing: {
       ...remsMap,

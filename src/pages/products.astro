@@ -1,0 +1,47 @@
+---
+import ProductCard, { type Product } from 'src/components/ProductCard.astro';
+import Layout from 'src/layouts/Layout.astro';
+
+const products: Product[] = [
+  {
+    href: 'https://tech-accel.vercel.app',
+    iconUrl: '/products//tech-accel.png',
+    scale: 0.8,
+    name: 'Tech Accel',
+    description: 'A web music app I developed in <span class="text-blue">Cyber Agent</span> program <span class="text-blue">Tech Accel</span>.',
+  },
+  {
+    href: 'https://marketplace.visualstudio.com/items?itemName=reizt.vscode-px-to-rem',
+    iconUrl: '/products//vscode-px-to-rem.svg',
+    scale: 0.7,
+    name: 'VSCode px to rem',
+    description:
+      'A <span class="text-blue">VSCode extension</span> that converts <code class="font-bold">px</code> in CSS/SCSS files to <code class="font-bold">rem</code>',
+  },
+  {
+    href: 'https://github.com/reizt/todo-cli',
+    iconUrl: '/products//todo-cli.svg',
+    scale: 0.8,
+    name: 'TODO CLI',
+    description: 'A simple CLI TODO tool written in <span class="text-blue">Go</span>.',
+  },
+  {
+    href: 'https://github.com/reizt/multipart-parser',
+    iconUrl: '/products//multipart-parser.svg',
+    scale: 0.75,
+    name: 'Multipart Parser',
+    description: 'Implemented a function that just parses <span class="text-blue">multipart/form-data</span> request.',
+  },
+];
+---
+
+<Layout currentPath="/products/">
+  <div class="px-16 xl:px-60">
+    <section id="products" class="mx-auto flex min-h-full-screen-y w-full max-w-1000 flex-col py-60 xl:py-120 xl:pt-160">
+      <h2 class="mb-20 text-32 font-bold leading-tight tracking-widest xl:text-48">Products</h2>
+      <div class="mb-12 grid h-max grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-1">
+        {products.map((product) => <ProductCard product={product} />)}
+      </div>
+    </section>
+  </div>
+</Layout>
