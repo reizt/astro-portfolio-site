@@ -10,12 +10,12 @@ export interface Props {
 const { title, currentPath } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{title != null ? `${title} | ` : ''}Reiju Takahashi</title>
+    <title>{`${title != null ? `${title} | ` : ''}Reiju Takahashi`}</title>
     <meta name="description" content="Reiju Takahashi's portfolio" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
